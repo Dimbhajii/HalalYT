@@ -33,7 +33,7 @@ export default function Reviews() {
   return (
     <section id="reviews" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center text-gray-900 mb-4 sm:mb-6 px-2">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center text-black mb-4 sm:mb-6 px-2">
           What Our Clients Think
         </h2>
         <div className="w-24 sm:w-32 h-1 bg-black mx-auto mb-10 sm:mb-12 lg:mb-16"></div>
@@ -42,7 +42,7 @@ export default function Reviews() {
           {reviews.map((review, index) => (
             <div
               key={index}
-              className="bg-gray-50 p-6 sm:p-8 lg:p-10 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 transform hover:-translate-y-1"
+              className="bg-white p-6 sm:p-8 lg:p-10 border border-gray-200 hover:border-black transition-all duration-300"
             >
               <div className="flex mb-4 sm:mb-6">
                 {[...Array(review.rating)].map((_, i) => (
@@ -53,7 +53,7 @@ export default function Reviews() {
                 &ldquo;{review.comment}&rdquo;
               </p>
               <div className="pt-4 sm:pt-6 border-t border-gray-200">
-                <p className="font-bold text-gray-900 text-base sm:text-lg">{review.name}</p>
+                <p className="font-bold text-black text-base sm:text-lg">{review.name}</p>
                 <p className="text-xs sm:text-sm text-gray-600 mt-1">{review.business}</p>
               </div>
             </div>
@@ -61,7 +61,7 @@ export default function Reviews() {
         </div>
         
         <div className="text-center mt-10 sm:mt-12 lg:mt-16">
-          <button className="text-gray-900 font-bold text-base sm:text-lg hover:text-gray-700 transition-colors inline-flex items-center gap-2">
+          <button className="text-black font-bold text-base sm:text-lg hover:text-gray-600 transition-colors inline-flex items-center gap-2">
             View More
             <span className="text-lg sm:text-xl">→</span>
           </button>

@@ -40,7 +40,7 @@ export default function Statistics() {
             return (
               <div key={index} className="text-center">
                 <div className="flex justify-center mb-4 sm:mb-6">
-                  <div className="w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-gray-800 rounded-full flex items-center justify-center">
+                  <div className="w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 bg-white/10 rounded-full flex items-center justify-center">
                     <Icon size={28} className="text-white sm:w-8 sm:h-8 lg:w-10 lg:h-10" />
                   </div>
                 </div>
