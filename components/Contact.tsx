@@ -37,7 +37,12 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-xs sm:text-sm text-gray-600">Phone</p>
-                  <p className="text-sm sm:text-base text-black font-medium">+44 7757277744</p>
+                  <a 
+                    href="tel:+447757277744" 
+                    className="text-sm sm:text-base text-black font-medium hover:text-gray-600 transition-colors"
+                  >
+                    +44 7757 277744
+                  </a>
                 </div>
               </div>
               
