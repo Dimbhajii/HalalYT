@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import { ExternalLink } from 'lucide-react'
 
 declare global {
@@ -14,8 +14,17 @@ declare global {
 }
 
 export default function Showcase() {
-  const instagramReels = [
+  const [showAll, setShowAll] = useState(false)
   
+  const instagramReels = [
+    {
+      url: 'https://www.instagram.com/reel/CoAuD3CvWgu/',
+      reelId: 'CoAuD3CvWgu',
+    },
+    {
+      url: 'https://www.instagram.com/reel/C4JSQItpucS/',
+      reelId: 'C4JSQItpucS',
+    },
     {
       url: 'https://www.instagram.com/reel/DQrTxCyDDC5/',
       reelId: 'DQrTxCyDDC5',
@@ -93,7 +102,7 @@ export default function Showcase() {
     return () => {
       clearTimeout(timeoutId)
     }
-  }, [])
+  }, [showAll])
 
   return (
     <section id="showcase" className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 bg-white">
@@ -104,7 +113,7 @@ export default function Showcase() {
         <div className="w-24 sm:w-32 h-1 bg-black mx-auto mb-10 sm:mb-12 lg:mb-16"></div>
         
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6">
-          {instagramReels.map((reel, index) => (
+          {(showAll ? instagramReels : instagramReels.slice(0, 8)).map((reel, index) => (
             <div
               key={index}
               className="relative group overflow-hidden rounded-2xl bg-white border border-gray-200 hover:border-black transition-all duration-300"
@@ -227,17 +236,25 @@ export default function Showcase() {
           ))}
         </div>
         
-        <div className="text-center mt-10 sm:mt-12 lg:mt-16">
-          <a
-            href="https://www.instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-black font-bold text-base sm:text-lg hover:text-gray-600 transition-colors inline-flex items-center gap-2"
-          >
-            See More
-            <span className="text-lg sm:text-xl">→</span>
-          </a>
-        </div>
+        {instagramReels.length > 8 && (
+          <div className="text-center mt-10 sm:mt-12 lg:mt-16">
+            <button
+              onClick={() => {
+                setShowAll(!showAll)
+                // Reprocess Instagram embeds when showing more
+                setTimeout(() => {
+                  if (window.instgrm && window.instgrm.Embeds) {
+                    window.instgrm.Embeds.process()
+                  }
+                }, 100)
+              }}
+              className="text-black font-bold text-base sm:text-lg hover:text-gray-600 transition-colors inline-flex items-center gap-2"
+            >
+              {showAll ? 'Show Less' : 'See More'}
+              <span className="text-lg sm:text-xl">→</span>
+            </button>
+          </div>
+        )}
       </div>
     </section>
   )
