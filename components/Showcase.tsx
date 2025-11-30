@@ -15,50 +15,40 @@ declare global {
 
 export default function Showcase() {
   const instagramReels = [
+  
     {
-      url: 'https://www.instagram.com/reel/DKcBjDGSUY-/?igsh=M3Vvc2lvdXY2NjNw',
-      reelId: 'DKcBjDGSUY-',
-    },
-    {
-      url: 'https://www.instagram.com/reel/DQrTxCyDDC5/?igsh=djFldHMzcmpweDR1',
+      url: 'https://www.instagram.com/reel/DQrTxCyDDC5/',
       reelId: 'DQrTxCyDDC5',
     },
     {
-      url: 'https://www.instagram.com/reel/DRHaAB1jB11/?igsh=NjJ0dWxvaTdudnQy',
+      url: 'https://www.instagram.com/reel/DRHaAB1jB11/',
       reelId: 'DRHaAB1jB11',
     },
     {
-      url: 'https://www.instagram.com/reel/DIKWblAT72V/?igsh=MWtoMmd2bzk5MjI2Mg==',
+      url: 'https://www.instagram.com/reel/DIKWblAT72V/',
       reelId: 'DIKWblAT72V',
     },
     {
-      url: 'https://www.instagram.com/reel/DFxn_XyNA_K/?igsh=MXg0bmphbHV0NTd6eA==',
+      url: 'https://www.instagram.com/reel/DFxn_XyNA_K/',
       reelId: 'DFxn_XyNA_K',
     },
     {
-      url: 'https://www.instagram.com/reel/DJ65cRCRdKU/?igsh=MWRycncwcDZlYnIyNg==',
+      url: 'https://www.instagram.com/reel/DJ65cRCRdKU/',
       reelId: 'DJ65cRCRdKU',
     },
     {
-      url: 'https://www.instagram.com/reel/DJwlkJeO3Zx/?igsh=Z2ZueDM4aGY0Ymwz',
+      url: 'https://www.instagram.com/reel/DJwlkJeO3Zx/',
       reelId: 'DJwlkJeO3Zx',
     },
     {
-      url: 'https://www.instagram.com/reel/DHOJfbtTxmg/?igsh=MXU2azNlMW01ZnU3aQ==',
+      url: 'https://www.instagram.com/reel/DHOJfbtTxmg/',
       reelId: 'DHOJfbtTxmg',
     },
     {
-      url: 'https://www.instagram.com/reel/DFHK1wlMdtP/?igsh=MWM0ZXF1dm40ODgzNQ==',
+      url: 'https://www.instagram.com/reel/DFHK1wlMdtP/',
       reelId: 'DFHK1wlMdtP',
     },
-    {
-      url: 'https://www.instagram.com/reel/DIJsLMGMXnb/?igsh=N2Z2dTV5Mno4OW10',
-      reelId: 'DIJsLMGMXnb',
-    },
-    {
-      url: 'https://www.instagram.com/reel/DFsr-7UJFCq/?igsh=MXBqdTVjbXlxNmF4cQ==',
-      reelId: 'DFsr-7UJFCq',
-    },
+   
   ]
 
   useEffect(() => {
