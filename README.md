@@ -1,6 +1,6 @@
-# HalalYT - Video Editing Service Website
+# HalalYT - Digital Media and Creative Service Website
 
-A modern, professional website built with Next.js, TypeScript, and Tailwind CSS, inspired by bundle-media.co.
+A modern, professional website built with Next.js, TypeScript, and Tailwind CSS.
 
 ## Tech Stack
 
