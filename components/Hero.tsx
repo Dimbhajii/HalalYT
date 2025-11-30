@@ -26,7 +26,7 @@ export default function Hero() {
               href="#showcase"
               className="border-2 border-black text-black px-8 sm:px-10 py-4 sm:py-5 rounded-lg text-base sm:text-lg font-semibold hover:bg-black hover:text-white transition-all duration-300 inline-flex items-center justify-center"
             >
-              see the work
+              See Our Work
             </Link>
           </div>
         </div>
